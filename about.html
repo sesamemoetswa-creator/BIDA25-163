@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sesameflowershop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Sesame Flower Shop Logo" class="logo-img"/>
+  Sesame Flower <span>Shop</span>
+</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <span class="hero-badge">Our Story</span>
+      <h1>More Than Just Flowers</h1>
+      <p>A passion-driven flower shop based in Gaborone,<br/>
+      dedicated to making every occasion truly unforgettable.</p>
+    </div>
+    <div class="deco-ring r1"></div>
+    <div class="deco-ring r2"></div>
+  </section>
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section class="about-story">
+    <div class="about-story-inner">
+
+      <div class="story-image-wrap">
+        <img src="shop.jpg" alt="Our flower shop in Gaborone" class="story-img"/>
+        <div class="story-float-badge">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>Trusted</strong>
+            <span>by Gaborone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-text">
+        <span class="section-label">Who We Are</span>
+        <h2>Bringing Nature's Beauty to Your Doorstep</h2>
+        <p>
+          We are located in <strong>Phakalane Phase 2, Gaborone, Botswana</strong> — a
+          neighbourhood we are proud to call home. From our little corner of the city,
+          we craft arrangements that carry emotion, colour, and life into every space
+          they enter.
+        </p>
+        <p>
+          We sell <strong>fresh flowers, bouquets, and decorations for events</strong> of
+          all kinds — from intimate birthday surprises and romantic anniversaries to
+          grand weddings and corporate functions. No occasion is too big or too small
+          for a beautiful bloom.
+        </p>
+        <p>
+          Our goal is simple: <em>to make every occasion special with beautiful flowers.</em>
+          We believe that the right arrangement can say what words cannot — and we pour
+          that belief into every single bouquet we create.
+        </p>
+        <a href="products.html" class="btn-shop">Browse Our Collection</a>
+      </div>
+
+    </div>
+  </section>
+
+  
+ 
+
+  <!-- ===== WHAT WE OFFER ===== -->
+  <section class="what-we-offer">
+    <div class="offer-inner">
+      <span class="section-label centered">What We Offer</span>
+      <h2 class="centered">Everything You Need for Every Occasion</h2>
+      <p class="offer-subtitle centered">
+        From a single stem to a full event decoration — we have you covered.
+      </p>
+
+      <div class="offer-grid">
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Fresh Flowers</h3>
+          <p>Hand-selected daily from trusted growers. Every stem is fresh, vibrant,
+          and full of life — guaranteed.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fa-solid fa-gift"></i></div>
+          <h3>Custom Bouquets</h3>
+          <p>Tell us the occasion, the person, the feeling — and we will craft a bouquet
+          that speaks directly to the heart.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>Event Decoration</h3>
+          <p>Weddings, graduations, corporate events — we transform any venue into a
+          breathtaking floral experience.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Same Day Delivery</h3>
+          <p>Order before noon and we will deliver your flowers fresh to any address
+          in Gaborone the very same day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-us">
+    <div class="why-inner">
+
+      <div class="why-text">
+        <span class="section-label">Why Choose Sesame Flower Shop</span>
+        <h2>We Don't Just Sell Flowers —<br/>We Create Memories</h2>
+        <ul class="why-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Locally Based in Gaborone</strong>
+              <p>We offer delivery across all areas of Gaborone.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Freshness Guaranteed</strong>
+              <p>Every flower is sourced fresh. If you are not satisfied, we make it right — no questions asked.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Affordable Luxury</strong>
+              <p>Beautiful flowers should not break the bank. Premium quality at prices that make sense.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Personalised Service</strong>
+              <p>Every order gets personal attention. We listen, we create, and we deliver with love.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="why-image">
+        <img src="why.jpg" alt="Beautiful flower arrangement"/>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <section class="about-cta">
+    <div class="cta-inner">
+      <i class="fa-solid fa-location-dot cta-icon"></i>
+      <h2>Ready to Make Someone's Day?</h2>
+      <p>Visit us at <strong>Phakalane Phase 2, Gaborone</strong> — or order online
+      and we will bring the flowers straight to you.</p>
+      <div class="cta-buttons">
+        <a href="products.html" class="btn-shop">Shop Now</a>
+        <a href="contact.html" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Sesame Flower Shop</strong> All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

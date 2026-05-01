@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SesameFlowerShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Sesame Flower Shop Logo" class="logo-img"/>
+  Sesame Flower <span>Shop</span>
+</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================================
+       1. HERO SECTION
+  ==================================== -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="hero-badge">100% Natural</span>
+        <h1 class="hero-title">Fresh Flowers</h1>
+        <h2 class="hero-subtitle">Natural &amp; Beautiful Flowers</h2>
+        <p class="hero-desc">
+          We are located in Phakalane Phase 2, Gaborone, Botswana.
+          We sell fresh flowers, bouquets and decorations for events.
+          Our goal is to make every occasion special with beautiful flowers.
+        </p>
+        <a href="products.html" class="btn-shop">Shop Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================
+       2. ABOUT PREVIEW SECTION
+  ==================================== -->
+  <section class="about-preview" id="about">
+    <div class="about-container">
+
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="about4.jpg" alt="Fresh flowers arranged beautifully"/>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="about-text">
+        <span class="about-badge">Our Story</span>
+        <h2>We Believe Every Moment Deserves a Flower</h2>
+        <p class="about-lead">
+          Born from a love of nature and a passion for beauty, Flower. brings
+          you the freshest blooms handpicked from sustainable farms — delivered
+          straight to your door with care.
+        </p>
+        <p class="about-body">
+          Whether it's a birthday, an anniversary, or simply a Tuesday that
+          needs brightening — we have the perfect arrangement for every emotion
+          and every occasion. Each bouquet is crafted by our expert florists
+          who treat every flower like a work of art.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight">
+            <i class="fa-solid fa-leaf"></i>
+            <span>100% Natural</span>
+          </div>
+          <div class="highlight">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Same Day Delivery</span>
+          </div>
+          <div class="highlight">
+            <i class="fa-solid fa-heart"></i>
+            <span>Made with Love</span>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn-shop">Learn More About Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================
+       3. FEATURED PRODUCTS (3 cards only)
+  ==================================== -->
+  <section class="featured-products" id="products">
+    <div class="featured-inner">
+
+      <span class="section-label centered">Hand Picked for You</span>
+      <h2 class="centered">Our Most Loved Flowers</h2>
+      <p class="featured-subtitle centered">
+        A taste of what we offer — visit our full collection for more.
+      </p>
+
+      <div class="featured-grid">
+
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="bliss.jpg" alt="Pink Bliss Bouquet"/>
+            <span class="card-badge">Bestseller</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            <span class="card-category">Bouquet</span>
+            <h3 class="card-title">Pink Bliss Bouquet</h3>
+            <p class="card-desc">A dreamy mix of blush peonies and baby's breath — perfect for any celebration.</p>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="price-current">P 250.00</span>
+                <span class="price-old">P 320.00</span>
+              </div>
+              <button class="btn-add-to-cart" onclick="addToCart(this)">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="red roses.jpg" alt="Classic Red Roses"/>
+            <span class="card-badge new">New</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            <span class="card-category">Roses</span>
+            <h3 class="card-title">Classic Red Roses</h3>
+            <p class="card-desc">Twelve hand-selected long-stem red roses wrapped in luxury satin ribbon.</p>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="price-current">P 320.00</span>
+              </div>
+              <button class="btn-add-to-cart" onclick="addToCart(this)">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="luxury.jpg" alt="Luxury Gift Set"/>
+            <span class="card-badge">Popular</span>
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            <span class="card-category">Gift Set</span>
+            <h3 class="card-title">Luxury Gift Set</h3>
+            <p class="card-desc">A beautiful box of seasonal flowers paired with handcrafted chocolates and a heartfelt card.</p>
+            <div class="card-footer">
+              <div class="card-price">
+                <span class="price-current">P 480.00</span>
+              </div>
+              <button class="btn-add-to-cart" onclick="addToCart(this)">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /featured-grid -->
+
+      <!-- View All Button -->
+      <div class="featured-cta">
+        <a href="products.html" class="btn-shop">View All Products</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Flower.</strong> All rights reserved. | Phakalane Phase 2, Gaborone, Botswana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

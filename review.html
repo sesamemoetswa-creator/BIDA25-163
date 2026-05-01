@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sesameflowershop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="review.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Sesame Flower Shop Logo" class="logo-img"/>
+  Sesame Flower <span>Shop</span>
+</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="review.html" class="active">Review</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="review-hero">
+    <div class="review-hero-content">
+      <span class="hero-badge">Customer Love</span>
+      <h1>What Our Customers Say</h1>
+      <p>Real words from real people who let our flowers speak for them.</p>
+    </div>
+    <div class="deco-petal p1"></div>
+    <div class="deco-petal p2"></div>
+    <div class="deco-petal p3"></div>
+  </section>
+
+  <!-- ===== OVERALL RATING STRIP ===== -->
+  <section class="rating-strip">
+    <div class="rating-strip-inner">
+      <div class="overall-score">
+        <span class="big-score">4.9</span>
+        <div class="big-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <span class="score-label">Overall Rating</span>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-bars">
+        <div class="bar-row">
+          <span>5 <i class="fa-solid fa-star"></i></span>
+          <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+          <span>88%</span>
+        </div>
+        <div class="bar-row">
+          <span>4 <i class="fa-solid fa-star"></i></span>
+          <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+          <span>8%</span>
+        </div>
+        <div class="bar-row">
+          <span>3 <i class="fa-solid fa-star"></i></span>
+          <div class="bar-track"><div class="bar-fill" style="width:3%"></div></div>
+          <span>3%</span>
+        </div>
+        <div class="bar-row">
+          <span>2 <i class="fa-solid fa-star"></i></span>
+          <div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>
+          <span>1%</span>
+        </div>
+        <div class="bar-row">
+          <span>1 <i class="fa-solid fa-star"></i></span>
+          <div class="bar-track"><div class="bar-fill" style="width:0%"></div></div>
+          <span>0%</span>
+        </div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-highlights">
+        <div class="r-highlight">
+          <i class="fa-solid fa-heart"></i>
+          <strong>500+</strong>
+          <span>Happy Customers</span>
+        </div>
+        <div class="r-highlight">
+          <i class="fa-solid fa-comments"></i>
+          <strong>320+</strong>
+          <span>Reviews Written</span>
+        </div>
+        <div class="r-highlight">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <strong>99%</strong>
+          <span>Would Recommend</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEW CARDS ===== -->
+  <section class="reviews-section">
+    <div class="reviews-inner">
+      <span class="section-label centered">Customer Reviews</span>
+      <h2 class="centered">Straight From the Heart</h2>
+
+      <div class="reviews-grid" id="reviewsGrid">
+
+        <!-- Card 1 -->
+        <article class="review-card">
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#fce4f0; color:#e91e8c;">T</div>
+            <div class="reviewer-info">
+              <strong>Tebogo M.</strong>
+              <span>Gaborone</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "I ordered a bouquet for my mother's birthday and she absolutely loved it!
+            The flowers were so fresh and beautifully arranged. Delivery was on time too.
+            Will definitely order again!"
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Pink Bliss Bouquet</span>
+            <span class="review-date">March 2026</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="review-card featured">
+          <div class="featured-tag">⭐ Top Review</div>
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#e8f4e8; color:#28a745;">L</div>
+            <div class="reviewer-info">
+              <strong>Lerato K.</strong>
+              <span>Phakalane</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "Sesame Flower Shop is simply the best in Gaborone! I used them for my wedding
+            decoration and the venue looked like something from a magazine. Every
+            guest was asking about the flowers. The team was professional, creative
+            and so caring. Thank you so much!"
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Event Decoration</span>
+            <span class="review-date">February 2026</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="review-card">
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#fff3e0; color:#ff9800;">B</div>
+            <div class="reviewer-info">
+              <strong>Boitumelo S.</strong>
+              <span>Gaborone West</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "Very lovely flowers and great packaging. The roses lasted almost two
+            weeks which surprised me. The only thing I'd love is more variety in
+            gift boxes but overall I'm very happy with my purchase!"
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Classic Red Roses</span>
+            <span class="review-date">January 2026</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="review-card">
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#e8eaf6; color:#3f51b5;">O</div>
+            <div class="reviewer-info">
+              <strong>Onkemetse D.</strong>
+              <span>Tlokweng</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "Same day delivery is a lifesaver! I forgot my anniversary and called
+            them at 10am — flowers arrived by 2pm looking absolutely stunning.
+            My wife was so impressed. You saved my life!"
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Luxury Gift Set</span>
+            <span class="review-date">April 2026</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="review-card">
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#fce4ec; color:#e91e8c;">N</div>
+            <div class="reviewer-info">
+              <strong>Neo P.</strong>
+              <span>Mogoditshane</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "The tulip bundle was everything! So colourful and bright, it lit up
+            my whole living room. The price was very fair for the quality received.
+            Sesame Flower Shop is now my go-to for all special occasions."
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Spring Tulip Bundle</span>
+            <span class="review-date">March 2026</span>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="review-card">
+          <div class="review-card-top">
+            <div class="reviewer-avatar" style="background:#e0f7fa; color:#00897b;">K</div>
+            <div class="reviewer-info">
+              <strong>Kabo R.</strong>
+              <span>Gaborone</span>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          <p class="review-text">
+            "Ordered the sunflower bouquet as a get-well gift and the recipient
+            said it instantly made her feel better! Beautiful, cheerful flowers.
+            Packaging was neat and the card was a lovely touch. Highly recommend."
+          </p>
+          <div class="review-card-footer">
+            <span class="review-product"><i class="fa-solid fa-tag"></i> Sunflower Sunshine</span>
+            <span class="review-date">February 2026</span>
+          </div>
+        </article>
+
+      </div><!-- /reviews-grid -->
+    </div>
+  </section>
+
+  <!-- ===== REVIEW FORM ===== -->
+  <section class="review-form-section">
+    <div class="review-form-inner">
+
+      <div class="form-header">
+        <span class="section-label centered">Share Your Experience</span>
+        <h2 class="centered">Leave a Review</h2>
+        <p class="centered">Your feedback helps us grow and helps other customers make the right choice.</p>
+      </div>
+
+      <div class="review-form-card">
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="reviewName">Your Name <span>*</span></label>
+            <input type="text" id="reviewName" placeholder="e.g. Tebogo M." required/>
+          </div>
+          <div class="form-group">
+            <label for="reviewLocation">Your Location</label>
+            <input type="text" id="reviewLocation" placeholder="e.g. Gaborone"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewProduct">Product / Service <span>*</span></label>
+          <select id="reviewProduct" required>
+            <option value="" disabled selected>Select what you purchased</option>
+            <option>Pink Bliss Bouquet</option>
+            <option>Classic Red Roses</option>
+            <option>Spring Tulip Bundle</option>
+            <option>Luxury Gift Set</option>
+            <option>Autumn Warmth Wreath</option>
+            <option>Sunflower Sunshine</option>
+            <option>White Elegance Roses</option>
+            <option>Mini Bloom Box</option>
+            <option>Event Decoration</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Star Rating Picker -->
+        <div class="form-group">
+          <label>Your Rating <span>*</span></label>
+          <div class="star-picker" id="starPicker">
+            <i class="fa-regular fa-star" data-value="1"></i>
+            <i class="fa-regular fa-star" data-value="2"></i>
+            <i class="fa-regular fa-star" data-value="3"></i>
+            <i class="fa-regular fa-star" data-value="4"></i>
+            <i class="fa-regular fa-star" data-value="5"></i>
+          </div>
+          <span class="star-label" id="starLabel">Click to rate</span>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewText">Your Review <span>*</span></label>
+          <textarea id="reviewText" rows="5"
+            placeholder="Tell us about your experience — what did you love? What can we improve?"></textarea>
+          <span class="char-count" id="charCount">0 / 300</span>
+        </div>
+
+        <button class="btn-submit" id="submitReview" onclick="submitReview()">
+          <i class="fa-solid fa-paper-plane"></i> Submit Review
+        </button>
+
+        <!-- Success message (hidden by default) -->
+        <div class="success-msg" id="successMsg">
+          <i class="fa-solid fa-circle-check"></i>
+          <div>
+            <strong>Thank you for your review!</strong>
+            <p>Your feedback means the world to us. We will publish it shortly.</p>
+          </div>
+        </div>
+
+      </div><!-- /review-form-card -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Sesame Flower Shop</strong> All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="review.js"></script>
+</body>
+</html>

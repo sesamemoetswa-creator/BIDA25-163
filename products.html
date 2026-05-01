@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sesameflowershop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="products.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER (same as homepage) ===== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Sesame Flower Shop Logo" class="logo-img"/>
+  Sesame Flower <span>Shop</span>
+</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="products-hero">
+    <div class="products-hero-content">
+      <span class="hero-badge">Hand Picked for You</span>
+      <h1>Our Collection</h1>
+      <p>Fresh blooms for every moment, every mood, every person you love.</p>
+    </div>
+    <!-- decorative circles -->
+    <div class="deco-circle c1"></div>
+    <div class="deco-circle c2"></div>
+    <div class="deco-circle c3"></div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <section class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bouquet">Bouquets</button>
+      <button class="filter-btn" data-filter="roses">Roses</button>
+      <button class="filter-btn" data-filter="tulips">Tulips</button>
+      <button class="filter-btn" data-filter="gift">Gift Sets</button>
+      <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS GRID ===== -->
+  <main class="products-main">
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Card 1 -->
+      <article class="product-card" data-category="bouquet">
+        <div class="card-image">
+          <img src="bliss.jpg" alt="Pink Bliss Bouquet"/>
+          <span class="card-badge">Bestseller</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Bouquet</span>
+          <h3 class="card-title">Pink Bliss Bouquet</h3>
+          <p class="card-desc">A dreamy mix of blush peonies and baby's breath — perfect for any celebration.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 250.00</span>
+              <span class="price-old">P 320.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card" data-category="roses">
+        <div class="card-image">
+          <img src="red roses.jpg" alt="Classic Red Roses"/>
+          <span class="card-badge new">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Roses</span>
+          <h3 class="card-title">Classic Red Roses</h3>
+          <p class="card-desc">Twelve hand-selected long-stem red roses wrapped in luxury satin ribbon.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 320.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card" data-category="tulips">
+        <div class="card-image">
+          <img src="tulip.jpg" alt="Spring Tulip Bundle"/>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Tulips</span>
+          <h3 class="card-title">Spring Tulip Bundle</h3>
+          <p class="card-desc">Vibrant mixed tulips bursting with colour — the essence of springtime joy.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 190.00</span>
+              <span class="price-old">P 230.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="product-card" data-category="gift">
+        <div class="card-image">
+          <img src="luxury.jpg" alt="Luxury Gift Set"/>
+          <span class="card-badge">Popular</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Gift Set</span>
+          <h3 class="card-title">Luxury Gift Set</h3>
+          <p class="card-desc">A beautiful box of seasonal flowers paired with handcrafted chocolates and a heartfelt card.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 480.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="product-card" data-category="seasonal">
+        <div class="card-image">
+          <img src="autumn.jpg" alt="Autumn Warmth Wreath"/>
+          <span class="card-badge new">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Seasonal</span>
+          <h3 class="card-title">Autumn Warmth Wreath</h3>
+          <p class="card-desc">Rich burnt-orange and deep burgundy blooms celebrating the beauty of the season.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 290.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="product-card" data-category="bouquet">
+        <div class="card-image">
+          <img src="sunflower.jpg" alt="Sunflower Sunshine"/>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Bouquet</span>
+          <h3 class="card-title">Sunflower Sunshine</h3>
+          <p class="card-desc">Bold, happy sunflowers that brighten any room and lift any spirit instantly.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 210.00</span>
+              <span class="price-old">P 260.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="product-card" data-category="roses">
+        <div class="card-image">
+          <img src="white.jpg" alt="White Elegance Roses"/>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Roses</span>
+          <h3 class="card-title">White Elegance Roses</h3>
+          <p class="card-desc">Pure white roses symbolising new beginnings — ideal for weddings and anniversaries.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 350.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="product-card" data-category="gift">
+        <div class="card-image">
+          <img src="mini.jpg" alt="Mini Bloom Box"/>
+          <span class="card-badge">Sale</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">Gift Set</span>
+          <h3 class="card-title">Mini Bloom Box</h3>
+          <p class="card-desc">A petite hatbox of pastel blooms — the sweetest little surprise for someone special.</p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">P 175.00</span>
+              <span class="price-old">P 220.00</span>
+            </div>
+            <button class="btn-add-to-cart" onclick="addToCart(this)">
+              <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /products-grid -->
+
+    <!-- Empty state (shown when filter has no results) -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <i class="fa-solid fa-seedling"></i>
+      <p>No flowers found in this category yet.<br/>Check back soon!</p>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Sesame Flower Shop</strong> All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
